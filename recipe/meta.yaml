@@ -24,7 +24,6 @@ requirements:
     - scikit-learn
     - tqdm
     - pytorch >=1.6.0
-    - torchvision
 
 test:
   imports:
