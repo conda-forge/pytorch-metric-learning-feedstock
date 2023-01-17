@@ -1,5 +1,5 @@
 {% set name = "pytorch-metric-learning" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytorch-metric-learning-{{ version }}.tar.gz
-  sha256: c63efb557872db5d053b0e1c69ea451c697c5decf8206289e172162ebea902e6
+  sha256: 207f9310f010a5a041b8b466305adb9606ca9b419e081a96a5230e3effb959d5
 
 build:
   noarch: python
@@ -24,7 +24,6 @@ requirements:
     - scikit-learn
     - tqdm
     - pytorch >=1.6.0
-    - torchvision
 
 test:
   imports:
