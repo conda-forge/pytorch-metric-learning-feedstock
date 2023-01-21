@@ -1,5 +1,5 @@
 {% set name = "pytorch-metric-learning" %}
-{% set version = "1.7.1" %}
+{% set version = "1.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytorch-metric-learning-{{ version }}.tar.gz
-  sha256: 207f9310f010a5a041b8b466305adb9606ca9b419e081a96a5230e3effb959d5
+  sha256: 504bf0d97033a7f233e4df58487585868b59991ecdf6f70be23676d3eefdf946
 
 build:
   noarch: python
