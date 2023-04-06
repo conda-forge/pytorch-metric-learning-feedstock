@@ -1,11 +1,11 @@
-About pytorch-metric-learning
-=============================
+About pytorch-metric-learning-feedstock
+=======================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytorch-metric-learning-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/KevinMusgrave/pytorch-metric-learning
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytorch-metric-learning-feedstock/blob/main/LICENSE.txt)
 
 Summary: The easiest way to use deep metric learning in your application. Modular, flexible, and extensible. Written in PyTorch.
 
