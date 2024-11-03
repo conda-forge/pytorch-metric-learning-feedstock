@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.0
-    - numpy <2.0
+    - numpy
     - scikit-learn
     - tqdm
     - pytorch >=1.6.0
