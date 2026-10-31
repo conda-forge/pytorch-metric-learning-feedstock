@@ -1,45 +1,54 @@
 {% set name = "pytorch-metric-learning" %}
-{% set version = "2.9.0" %}
+{% set version = "3.0.0" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pytorch-metric-learning-{{ version }}.tar.gz
-  sha256: 27a626caf5e2876a0fd666605a78cb67ef7597e25d7a68c18053dd503830701f
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pytorch_metric_learning-{{ version }}.tar.gz
+  sha256: a2b9a15990504773c11b459ff13d59cd2352b6ba420aea29740835475b31268a
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python {{ python_min }}.*
     - pip
-    - setuptools
+    - setuptools ==84.0.0
   run:
     - python >={{ python_min }}
-    - numpy
-    - scikit-learn
-    - tqdm
-    - pytorch >=1.6.0
+    - numpy >=2.5.3
+    - pytorch >=2.14.0
 
 test:
   imports:
     - pytorch_metric_learning
+    - pytorch_metric_learning.distances
+    - pytorch_metric_learning.distributed
+    - pytorch_metric_learning.evaluation
+    - pytorch_metric_learning.losses
+    - pytorch_metric_learning.miners
+    - pytorch_metric_learning.reducers
+    - pytorch_metric_learning.regularizers
+    - pytorch_metric_learning.samplers
   commands:
     - pip check
   requires:
     - pip
-    - python {{ python_min }}
+    - python {{ python_min }}.*
 
 about:
   home: https://github.com/KevinMusgrave/pytorch-metric-learning
-  summary: The easiest way to use deep metric learning in your application. Modular, flexible, and extensible. Written in PyTorch.
+  summary: Composable metric learning losses, miners, distances, samplers, and retrieval metrics for PyTorch.
   license: MIT
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - THIRD_PARTY_NOTICES.md
 
 extra:
   recipe-maintainers:
