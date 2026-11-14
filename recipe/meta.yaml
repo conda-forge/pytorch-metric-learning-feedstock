@@ -1,5 +1,5 @@
 {% set name = "pytorch-metric-learning" %}
-{% set version = "3.0.2" %}
+{% set version = "3.0.3" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/pytorch_metric_learning-{{ version }}.tar.gz
-  sha256: 295220283f71654d30cb5488ee27fbfb151941a705e7691150b68795d82ec7d9
+  sha256: f0482dc376f954af2f83f85a48e3c735cac63e0a4de4a4a73bd63dea6810c9ae
 
 build:
   noarch: python
